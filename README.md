@@ -455,3 +455,14 @@ The tool consumer can use as endpoint the following:
 </script>
 </html>
 ```
+
+# Appendix E, SNS Launch protocol code examples.
+
+There are several code examples in different programming language demonstrating how to
+implement SNS Launch protocol:
+
+language | GitHub repository
+--- | ---
+Java | [OpenSNS-BeterMetElkaar-SSOLaunchSamenBeter-Java](https://github.com/GidsOpenStandaarden/OpenSNS-BeterMetElkaar-SSOLaunchSamenBeter-Java)
+Python | [OpenSNS-BeterMetElkaar-SSOLaunchSamenBeter-Python](https://github.com/GidsOpenStandaarden/OpenSNS-BeterMetElkaar-SSOLaunchSamenBeter-Python)
+PHP | [OpenSNS-BeterMetElkaar-SSOLaunchSamenBeter-PHP](https://github.com/GidsOpenStandaarden/OpenSNS-BeterMetElkaar-SSOLaunchSamenBeter-PHP)
