@@ -217,6 +217,19 @@ The tool consumer can use as endpoint the following:
 
 # Appendix D, redirect page reference implementation
 
+The html below is a reference implementation of the redirect page. This page contains the following variables that should be injected
+into the html at the rendering stage (server side).
+* **JWT_TOKEN**, the JWT token
+* **ACTION**, this is typically the endpoint of the producer.
+* **PRIVACY_URL**, the link to the privacy statement of the producer. 
+
+In this reference implementation of the redirect page, the JavaScript reads the following parameters from the JWT token
+and renders them on the page
+* **aud** (required), the audience of the JWT token, the name of the producer.
+* **first_name** (optional), The first name of the user.
+* **last_name** (optional), The last name of the user.
+* **email** (optional), The email of the user.
+
 ```html
 <!doctype html>
 <html lang="nl">
@@ -273,6 +286,10 @@ The tool consumer can use as endpoint the following:
 
         </tbody>
     </table>
+
+    <div class="section">
+        <p><a target="_blank" href="PRIVACY_URL">Lees hier meer over het privacybeleid van {aud}</a></p>
+    </div>
 
     <div class="section">
         <button id="cancel" class="waves-effect waves-teal btn-flat">Annuleren<i class="material-icons right">cancel</i>
