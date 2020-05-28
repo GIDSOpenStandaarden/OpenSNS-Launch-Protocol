@@ -124,6 +124,7 @@ urn:sns:user:nl.issuer:123456
 * The expiration time (exp) on the message should be set to 5 minutes in order to prevent leaking JWT keys to be valid outside a timeframe.
 * The unique message id (jti) should be verified as a nonce and should be based on a random or pseudo random number. If a UUID is used, it should be initialized with a random number. This approach mitigates replay attacks.
 * Tokens must be transported over HTTPS from both consumer and producer sides.
+* The producer must validate that the user identifier matches the issuer domain, or, alternatively, store the user identity in the context if the issuer. The latter would mean that the user identity is different with different issuers, even if the identifiers are the same. 
 
 ### Example message
 
